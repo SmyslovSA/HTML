@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Chess table</TITLE> 
+			<style type="text/css">
+        		table {
+            		border-collapse: collapse;
+        		}
+        		table > tbody> tr > td {
+            		width: 30px;
+            		height: 30px;
+           			border: 1px solid black;
+        		}
+        		tr:nth-child(even) td:nth-child(odd),tr:nth-child(odd) td:nth-child(even){background-color: black} 
+        		table {counter-reset: x1}
+        		td::after{
+        			counter-increment: x1;
+        			font-weight: bold;
+        			float: right;
+        			color:green;
+        			content:counter(x1);
+        		}
+			</style>
+        </HEAD> 
+        <BODY>
+        	<table>
+           	 	<tr>
+               	 	<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+           	 	</tr>
+            	<tr>
+                	<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            	</tr>
+            	<tr>
+                	<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            	</tr>
+            	<tr>
+                	<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            	</tr>
+            	<tr>
+                	<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            	</tr>
+            	<tr>
+                	<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            	</tr>
+            	<tr>
+                	<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            	</tr>
+            	<tr>
+                	<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            	</tr>
+        	</table>
+        </BODY> 
+</HTML> 

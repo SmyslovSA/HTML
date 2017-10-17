@@ -1,0 +1,170 @@
+<!DOCTYPE HTML> 
+<HTML>
+  <HEAD>
+    <META charset="utf-8"/>
+    <TITLE>Forms</TITLE>
+  </HEAD>
+  <BODY>
+ 	<TABLE width="700">
+		<tr align="left" valign="top">
+			<th>
+				<H2>Простая форма поиска с вариантами:</H2>
+				<form name="simpleSearch" method="get" action="http://178.124.206.48/fe/form.php">
+					<fieldset>
+						<legend>Строка поиска</legend>
+						<input type="text" name="search_web" maxlength="10">
+						<input type="submit" value="Искать"><br>	
+						<label>
+							<input type="radio" name="search_s" value="site" checked>site
+						</label>
+						<label>
+							<input type="radio" name="search_s" value="google">google
+						</label><br>	
+						<EM>Длина запроса не более 10 символов</EM>
+					</fieldset>
+				</form>
+			</th>
+			<th>
+				<H2>Простая форма поиска с вариантами:</H2>
+				<form name="simpleSearch2" method="get" action="http://178.124.206.48/fe/form.php">
+					<fieldset>
+						<legend>Строка поиска</legend>
+						<input type="text" name="search_web2" id="search_req2" required Autofocus>
+						<label for="search_req2">*</label>
+						<input type="submit" value="Искать"><br>
+						<label>
+							<input type="radio" name="search_s2" value="site" checked>site
+						</label>
+						<label>
+							<input type="radio" name="search_s2" value="google">google
+						</label><br>		
+						<EM>*-обязательное поле</EM>
+					</fieldset>
+				</form>
+			</th>	
+		</tr>	
+		<tr align="left" valign="top">
+			<th>
+				<H2>Простая форма авторизации:</H2>
+				<form name="simpleAuthorization" method="post" action="http://178.124.206.48/fe/form.php">
+					<fieldset>
+						<legend>Авторизуйтесь</legend>
+						<input type="login" name="login_aut" id="login_req" required>
+						<label for="login_req">*</label>Логин
+						<input type="password" name="password_aut" id="password_req" required>
+						<label for="password_req">*</label>Пароль<br>				
+						<input type="checkbox" name="check_aut">Оставаться в системе<br>				
+						<input type="submit" value="Войти"><br>		
+						<EM>*-обязательное поле</EM>
+					</fieldset>
+				</form>
+			</th>
+			<th>
+				<H2>Опрос(голосование):</H2>
+				<form name="simpleQuestion" method="get" action="http://178.124.206.48/fe/form.php">
+					<fieldset>
+						<legend>Как вам?</legend>
+						<label>
+							<input type="radio" name="question" value="ничего" checked>ничего
+						</label><br>
+						<label>
+							<input type="radio" name="question" value="неплохо">неплохо
+						</label><br>
+						<label>
+							<input type="radio" name="question" value="хорошо">хорошо
+						</label><br>
+						<label>
+							<input type="radio" name="question" value="супер">супер
+						</label><br>
+						<input type="submit" value="Отправить"><br>
+						<input type="hidden" name="date_voite" value="2013.12.31">
+					</fieldset>
+				</form>
+			</th>	
+		</tr>
+		<tr align="left" valign="top">
+			<th>
+				<H2>Отзыв:</H2>
+				<form name="simpleText" method="post" action="http://178.124.206.48/fe/form.php">
+					<fieldset>
+						<legend>Оставьте Ваш отзыв</legend>
+						<input type="login" name="login_text" id="loginText_req" required>
+						<label for="loginText_req">*</label>Имя<br>
+						<input type="email" name="email_text" id="emailText_req" required>
+						<label for="emailText_req">*</label>e-mail<br>				
+						<textarea name="text_t" cols="30" rows="3"  placeholder="Форма отправки"></textarea><br>
+						<input type="submit" value="Отправить"><br>		
+						<EM>*-обязательное поле</EM>
+					</fieldset>
+				</form>
+			</th>
+			<th>
+				<H2>Выпадающий и мульти списки:</H2>
+				<form name="simpleList" method="post" action="http://178.124.206.48/fe/form.php">
+					<fieldset>
+						<legend>Города РБ</legend>
+						<select name="list" id="list">			
+							<option value="Минск">Минск</option> 
+							<option value="Витебск">Витебск</option>
+							<option value="Брест"selected>Брест</option>
+						</select>
+						<select name="list2[]" size="8" multiple id="list2[]">
+							<optgroup label="Города РБ">
+								<option value="Брест">Брест</option>
+								<option value="Минск">Минск</option>
+								<option value="Витебск">Витебск</option>
+							</optgroup>
+							<optgroup label="Города России">
+								<option value="Москва">Москва</option>
+								<option value="Рязань">Рязань</option>
+								<option value="Магадан">Магадан</option>
+							</optgroup>
+						</select><br>
+						<EM>При двойном щелчке выпадает список</EM><br>
+						<input list="simpleList1" name="simpleList1">
+							<datalist id="simpleList1">
+								<option value="Брест">Брест</option>
+								<option value="Минск">Минск</option>
+								<option value="Витебск">Витебск</option>
+								<option value="Москва">Москва</option>
+								<option value="Рязань">Рязань</option>
+								<option value="Магадан">Магадан</option>
+							</datalist>
+						<input type="submit" value="OK">
+					</fieldset>
+				</form>
+			</th>	
+		</tr>
+		<tr align="left" valign="top">
+			<th>
+				<H2>Загрузка файла на сервер:</H2>
+				<form name="simpleLoad" method="post" action="http://178.124.206.48/fe/form.php">
+					<fieldset>
+						<legend>Upload</legend>
+						<label>Файл:</label><br>
+						<input type="file" name="simpleFile" id="fileID" dir="ltr" enctype="multipart/form-data"><br>
+						<label>Срок хранения(года):</label><br>
+						<input type="date" size="35" name="simpleFileDate" pattern="[0-9]+">
+						<input type="submit" value="загрузить">
+					</fieldset>
+				</form>
+			</th>
+			<th>
+				<H2>Валидация данных HTML5:</H2>
+				<form name="simpleValidation" method="get" action="http://178.124.206.48/fe/form.php">
+					<fieldset>
+						<legend>Строка поиска</legend>
+						<input type="text" name="simpleValidationText" placeholder="Только русские буквы" 
+						pattern="[А-я]+"><br>
+						<label><EM>Телефонный номер в формате<br>
+						+XXX-XX-XXXXXXX</EM></label>
+						<input type="text" name="simpleValidationNumber" placeholder="+375-29-1234567"
+						pattern="\+375-(25|29|33|44)-[0-9]{7}"><br>
+						<input type="submit" value="Проверить">
+					</fieldset>
+				</form>
+			</th>	
+		</tr>
+	</TABLE>
+  </BODY>
+</HTML> ​

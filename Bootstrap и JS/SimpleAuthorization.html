@@ -1,0 +1,41 @@
+<!DOCTYPE HTML> 
+<HTML>
+  <HEAD>
+    <META charset="utf-8"/>
+    <TITLE>SimpleAuthorization</TITLE> 
+    <script type="text/javascript" src="JavaTable/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function()
+        {
+          $('#form').on('change',function()
+          {
+          if(($("#login_req").val())==($("#password_req").val()))
+            {
+              $('#login_req').css({'background-color' : 'green'});
+              $('#password_req').css({'background-color' : 'green'});
+            }
+          else  
+            {
+              $('#login_req').css({'background-color' : 'red'});
+              $('#password_req').css({'background-color' : 'red'});
+            }
+          });
+        });
+    </script>
+    <style type="text/css">
+    </style>
+  </HEAD>
+  <BODY>
+    <H2>Простая форма авторизации:</H2>
+        <form name="simpleAuthorization" method="post" action="http://178.124.206.48/fe/form.php" id='form'>
+          <fieldset>
+            <legend>Авторизуйтесь</legend>
+            <input type="password" name="login_aut" id="login_req" required>
+            <label for="login_req">*</label>Пароль
+            <input type="password" class="pass" name="password_aut" id="password_req" required>
+            <label for="password_req">*</label>Проверка пароля<br>        
+            <EM>*-обязательное поле</EM>
+          </fieldset>
+        </form>
+  </BODY>
+</HTML> ​

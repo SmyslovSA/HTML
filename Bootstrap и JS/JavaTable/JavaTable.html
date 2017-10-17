@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Java table</TITLE> 
+            <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+            <script type="text/javascript" src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+            <script type="text/javascript">
+            	$(document).ready(function()
+            	{
+
+            		var x=true;
+            		if (x=(true)) 
+            			{$('#Hide').show();$('#Show').hide();}
+            		else 
+            			{$('#Hide').hide();$('#Show').show();}
+            	
+            	$('tr').click(function()
+            		{
+            			$(this).hide();
+            			$('#Hide').hide();
+            			$('#Show').show();
+            			$('#main').show();
+            		});
+            	$('#Show').click(function()
+            	{
+            		$('#table tr').show();
+            		$('#Hide').show();
+            		$('#Show').hide();          		          
+            	})
+            });
+            </script>
+			<style type="text/css">
+        	/*	table  {
+        			border-collapse: collapse;
+        		}
+        		table>tbody>tr>td{
+        			border:1px dashed black;
+        			cursor:pointer;
+        		}
+        		table>tbody>tr>th{	
+        			border:1px dashed black;				
+        		}
+        		tr:not(:nth-child(1)){
+        			text-align: left;
+        		}
+        		tr:nth-child(odd){background-color:lightgrey}
+        		tr:nth-of-type(1){background-color:grey}*/
+        		caption {
+        			caption-side: bottom;
+        			text-align: center;
+        		}
+			</style>
+        </HEAD> 
+        <BODY>
+      		<table id="table" class="table table-hover table-bordered" >
+ 				<caption>данные о сотрудниках</caption>
+ 					<tr id="main">
+ 						<th>ФИО</th>
+ 						<th>пол</th> 
+ 						<th>должность</th>
+ 						<th>дата рож.</th>
+ 						<th>Данные 01</th>
+ 						<th>Данные 02</th>
+ 					</tr>
+ 					<tr>
+ 						<th>Иванов Иван Иванович</th>
+ 						<td>М</td> 
+ 						<td>начальник</td>
+ 						<td>01.01.1960</td>
+ 						<td>4567</td>
+ 						<td>3453</td>
+ 					</tr>
+ 					<tr>
+ 						<th>Петрова Илонна Петровна</th>
+ 						<td>Ж</td> 
+ 						<td>секретарь</td>
+ 						<td>01.01.1989</td>
+ 						<td>98795</td>
+ 						<td>46523</td>
+ 					</tr>
+ 					<tr>
+ 						<th>Сидоров Илья Игоревич</th>
+ 						<td>М</td> 
+ 						<td>бухгалтер</td>
+ 						<td>01.01.1979</td>
+ 						<td>743434</td>
+ 						<td>987979</td>
+ 					</tr>
+ 					<tr>
+ 						<th>Пупин Фёдор Фёдорович</th>
+ 						<td>М</td> 
+ 						<td>водитель</td>
+ 						<td>01.01.1963</td>
+ 						<td>74323434</td>
+ 						<td>9232379</td>
+ 					</tr>
+ 					<tr>
+ 						<th>Крупин Сергей Иванович</th>
+ 						<td>М</td> 
+ 						<td>водитель 2</td>
+ 						<td>01.01.1983</td>
+ 						<td>3234534</td>
+ 						<td>923123379</td>
+ 					</tr>
+ 			</table>
+ 			<button class="btn btn-default" type="submit" id="Show">Показать скрытые строки</button>
+ 			<button class="btn btn-default" type="submit" id="Hide">Скрытых строк нет</button>
+        </BODY> 
+</HTML> 
